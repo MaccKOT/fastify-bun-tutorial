@@ -1,0 +1,25 @@
+meta {
+  name: create task
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/todos
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "title": "Learn Fastify"
+  }
+}
+
+settings {
+  encodeUrl: false
+}

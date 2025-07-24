@@ -1,0 +1,25 @@
+meta {
+  name: update task by id
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/todos/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "completed": true
+  }
+}
+
+settings {
+  encodeUrl: false
+}
