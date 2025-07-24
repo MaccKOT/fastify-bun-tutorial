@@ -43,3 +43,29 @@ http://localhost:3000/docs
 ```bash
 curl -X POST http://localhost:3000/todos -H "Content-Type: application/json" -d '{"title": "Изучить Fastify и Bun"}'
 ```
+
+### Получить список всех задач
+
+```bash
+curl http://localhost:3000/todos
+```
+
+### Получить задачу по ID
+
+```bash
+curl http://localhost:3000/todos/1
+```
+
+### Обновить задачу по ID
+
+```bash
+curl -X PUT http://localhost:3000/todos/1 -H "Content-Type: application/json" -d '{"title": "Новое название задачи", "completed": true}'
+```
+
+### Удалить задачу по ID
+
+```bash
+curl -X DELETE http://localhost:3000/todos/1
+```
+
+Используйте коллекцию [Bruno](https://www.usebruno.com/) для просмотра всех возможных путей для API.
